@@ -2,10 +2,9 @@ var assert = chai.assert;
 var should = chai.should();
 var expect = chai.expect;
 
-var stub = sinon.stub(chrome);
-var stub = sinon.stub(chrome.runtime.OnMessage, "addListener", function(a){return});
-
 describe('Canvas Utility Functions', function() {
+
+  this.timeout(4000);
 
   describe('appendCanvasElement', function(){
     it('should append one canvas element the body', function(){
